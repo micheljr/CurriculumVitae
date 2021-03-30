@@ -5,4 +5,9 @@
         <RootNamespace>CurriculumVitae2</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CurriculumVitae2.Core\CurriculumVitae2.Core.csproj" />
+      <ProjectReference Include="..\CurriculumVitae2.Services\CurriculumVitae2.Services.csproj" />
+    </ItemGroup>
+
 </Project>

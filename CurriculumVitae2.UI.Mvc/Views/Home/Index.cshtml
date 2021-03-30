@@ -1,8 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model CurriculumVitae.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home";
+    var dob = DateTime.Parse("18/01/1995");
+    var leeftijd = DateTime.Now.Year - dob.Year;
+    if ((dob.Month > DateTime.Now.Month) || (dob.Month == DateTime.Now.Month && dob.Day > DateTime.Now.Day)) {leeftijd--;}
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET CurriculumVitae2.Core</a>.</p>
+<div class="voorstelling">
+    <div class="titleImg">
+        <h1 class="display-4">Hallo!</h1>
+        <img alt="Headshot" width="150px" height="182px" src="images/Headshot.jpg"/>
+    </div>
+    <p>Ik ben Michel Stroobants, @leeftijd jaar wonende te Oud-Turnhout.</p>
+    
 </div>
+<div class="opleidingen">
+    @foreach (var item in Model.Opleidingen)
+    {
+        <partial name="OpleidingPartial" model="item"/>
+    }
+</div>
+<div class="ervaringen"></div>
