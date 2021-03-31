@@ -10,13 +10,15 @@ namespace CurriculumVitae2.UI.Mvc.Controllers
     {
         private readonly IErvaringService _ervaringService;
         private readonly IOpleidingService _opleidingService;
+        private readonly IProjectService _projectService;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IErvaringService ervaringService, IOpleidingService opleidingService)
+        public HomeController(ILogger<HomeController> logger, IErvaringService ervaringService, IOpleidingService opleidingService, IProjectService projectService)
         {
             _logger = logger;
             _ervaringService = ervaringService;
             _opleidingService = opleidingService;
+            _projectService = projectService;
         }
 
         public IActionResult Index()
@@ -24,7 +26,8 @@ namespace CurriculumVitae2.UI.Mvc.Controllers
             var model = new HomeViewModel
             {
                 Opleidingen = _opleidingService.ListOpleidingen(),
-                Ervaringen = _ervaringService.ListErvaringen()
+                Ervaringen = _ervaringService.ListErvaringen(),
+                Projecten = _projectService.ListProjecten()
             };
             return View(model);
         }

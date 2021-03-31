@@ -8,8 +8,4 @@
       <ProjectReference Include="..\CurriculumVitae2.Domain\CurriculumVitae2.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Repositories" />
-    </ItemGroup>
-
 </Project>

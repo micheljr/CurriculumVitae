@@ -33,8 +33,12 @@ namespace CurriculumVitae2.UI.Mvc
             services.AddScoped<IErvaringService, ErvaringService>();
             services.AddScoped<IErvaringRepository, ErvaringRepository>();
             
+            
             services.AddScoped<IOpleidingService, OpleidingService>();
             services.AddScoped<IOpleidingRepository, OpleidingRepository>();
+
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

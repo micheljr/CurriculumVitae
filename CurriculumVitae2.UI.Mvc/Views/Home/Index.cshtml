@@ -16,9 +16,9 @@
     <p></p>
 </div>
 <br>
-<div class="opleidingenContainer">
+<div class="Container">
     <h1>Opleiding</h1>
-    <div class="opleidingen">
+    <div class="subContainer opleidingen">
         @foreach (var item in Model.Opleidingen)
         {
             <partial name="OpleidingPartial" model="item"/>
@@ -26,13 +26,21 @@
     </div>
 </div>
 <br>
-<div class="ervaringContainer">
+<div class="Container">
     <h1>Werkervaring</h1>
-    <div class="ervaringen">
+    <div class="subContainer ervaringen">
         @foreach (var item in Model.Ervaringen)
         {
             <partial name="ErvaringPartial" model="item"/>
         }
     </div>
 </div>
-<div class="ervaringen"></div>
+<div class="Container">
+    <h1>Projecten</h1>
+    <div class="subContainer">
+        @foreach (var item in Model.Projecten)
+        {
+            <partial name="ProjectPartial" model="item"/>
+        }
+    </div>
+</div>

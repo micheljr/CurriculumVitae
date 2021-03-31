@@ -8,13 +8,14 @@ namespace CurriculumVitae2.Core
     {
         public IList<Opleiding> Opleidingen { get; set; }
         public IList<Ervaring> Ervaringen { get; set; }
-        
-        
+        public IList<Project> Projecten { get; set; }
+
+
         public void Initialize()
         {
             Opleidingen = new List<Opleiding>
             {
-                new Opleiding
+                new()
                 {
                     Naam = "Techniek Wetenschappen",
                     Instituut = "Heilig Graf Turnhout",
@@ -23,7 +24,7 @@ namespace CurriculumVitae2.Core
                     StartDatum = DateTime.Parse("01/09/2012"),
                     EindDatum = DateTime.Parse("30/06/2015")
                 },
-                new Opleiding
+                new()
                 {
                     Naam = "Toegepaste Informatica",
                     Instituut = "Karel De Grote Hogeschool campus Groenplaats",
@@ -32,7 +33,7 @@ namespace CurriculumVitae2.Core
                     StartDatum = DateTime.Parse("15/09/2016"),
                     EindDatum = DateTime.Parse("01/05/2017")
                 },
-                new Opleiding
+                new()
                 {
                 Naam = "Toegepaste Informatica afstandsonderwijs",
                 Instituut = "Vives Hogeschool campus Kortrijk",
@@ -44,7 +45,7 @@ namespace CurriculumVitae2.Core
             };
             Ervaringen = new List<Ervaring>
             {
-                new Ervaring
+                new()
                 {
                     Name = "Technisch laborant",
                     BedrijfName = "Lavetan",
@@ -53,7 +54,7 @@ namespace CurriculumVitae2.Core
                     EindDatum = DateTime.Parse("01/09/2016"),
                     Image = "Lavetan.png"
                 },
-                new Ervaring
+                new()
                 {
                     Name = "Machine operator",
                     BedrijfName = "Soudal",
@@ -61,6 +62,23 @@ namespace CurriculumVitae2.Core
                     StartDatum = DateTime.Parse("01/05/2017"),
                     EindDatum = default,
                     Image = "Soudal.png"
+                }
+            };
+            Projecten = new List<Project>
+            {
+                new()
+                {
+                    Name = "Curriculum Vitae",
+                    Url = "https://github.com/micheljr/CurriculumVitae",
+                    Beschrijving = "CV gemaakt in C#",
+                    Image ="CV.png"
+                },
+                new ()
+                {
+                    Name = "Supermarket.API",
+                    Url = "https://dev.azure.com/r0762289/_git/Supermarket.API",
+                    Beschrijving = "Project om het maken van een CRUD REST API in C#.NET te testen",
+                    Image = "Supermarket.png"
                 }
             };
         }

@@ -86,11 +86,11 @@ body {
   height: 182px;
   
 }
-.titleImg h1, .opleidingenContainer h1, .ervaringContainer h1, .voorstelling p {
+.titleImg h1, .Container h1, .voorstelling p {
   color: white;
 }
 
-.opleidingen, .ervaringen {
+.subContainer {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -103,44 +103,47 @@ body {
   justify-content: space-around;
 }
 
-.opleidingen div img, .ervaringen div img {
+.subContainer div img {
   max-width: 100px;
   height: auto;
 }
-.opleidingen div, .ervaringen div {
+.subContainer div {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 2px white;
   margin-top: 10px;
 }
-.opleidingen div:hover, .ervaringen div:hover {
+.subContainer div:hover {
   border: solid 2px cornflowerblue;
 }
-.opleidingen div, .ervaringen div {
+.subContainer div {
   width: 30%;
   height: auto;
 }
+.ervaringen {
+  width: 100%;
+}
 
 @media only screen and (max-width: 768px){
-  .opleidingen div, .ervaringen div{
+  .subContainer div{
     width: 40%;
     height: auto;
   }
 }
 
 @media only screen and (max-width: 600px){
-  .opleidingenContainer, .ervaringContainer {
+  .Container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .opleidingen, .ervaringen {
+  .subContainer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  .opleidingen div, .ervaringen div {
+  .subContainer div {
     width: 70%;
   }
   .titleImg img {
@@ -167,6 +170,4 @@ body {
   .titleImg h1 {
     font-size: 20px;
   }
-  
-  
 }
