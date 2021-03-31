@@ -70,7 +70,7 @@ namespace CurriculumVitae2.Core
                 {
                     Name = "Curriculum Vitae",
                     Url = "https://github.com/micheljr/CurriculumVitae",
-                    Beschrijving = "CV gemaakt in C#",
+                    Beschrijving = "CV gemaakt in C#.NET Core Web",
                     Image ="CV.png"
                 },
                 new ()

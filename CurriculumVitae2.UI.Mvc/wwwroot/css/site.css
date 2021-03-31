@@ -102,31 +102,46 @@ body {
 .ervaringen {
   justify-content: space-around;
 }
+.projecten{
+  justify-content: space-around;
+}
 
+.subContainer a {
+  text-decoration: none;
+  color: black;
+}
+.subContainer a img {
+  max-width: 100%;
+  height: auto;
+}
 .subContainer div img {
   max-width: 100px;
   height: auto;
 }
-.subContainer div {
+.subContainer div, .subContainer a {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 2px white;
   margin-top: 10px;
 }
-.subContainer div:hover {
+.subContainer div:hover, .subContainer a:hover {
   border: solid 2px cornflowerblue;
+}
+.subContainer a {
+  width: 45%;
+  height: auto;
 }
 .subContainer div {
   width: 30%;
   height: auto;
 }
-.ervaringen {
+.ervaringen, .projecten {
   width: 100%;
 }
 
 @media only screen and (max-width: 768px){
-  .subContainer div{
+  .subContainer div, .subContainer a{
     width: 40%;
     height: auto;
   }
@@ -143,7 +158,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
   }
-  .subContainer div {
+  .subContainer div, .subContainer a {
     width: 70%;
   }
   .titleImg img {

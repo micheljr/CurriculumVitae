@@ -1,9 +1,7 @@
 ﻿@model CurriculumVitae2.Domain.Models.Project
-
-<div class="card text-center">
-    <a href="@Model.Url">
-        <img src="~/images/@Model.Image" alt="@Model.Name"/>
-        <h4 class="card-title">@Model.Name</h4>
-        <p class="card-subtitle">@Model.Beschrijving</p>
-    </a>
-</div>
+<a class="card text-center" href="@Model.Url">
+    <img src="~/images/@Model.Image" alt="@Model.Name"/>
+    <br/>
+    <h4 class="card-title">@Model.Name</h4>
+    <p class="card-subtitle">@Model.Beschrijving</p>
+</a>
