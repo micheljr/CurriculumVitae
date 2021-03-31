@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Models;
+﻿using System.Collections.Generic;
+using CurriculumVitae2.Domain.Models;
 
-namespace CurriculumVitae.Models
+namespace CurriculumVitae2.UI.Mvc.Models
 {
     public class HomeViewModel
     {

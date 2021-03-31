@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CurriculumVitae.Core;
+using CurriculumVitae2.Core;
+using CurriculumVitae2.Domain.Services;
+using CurriculumVitae2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CurriculumVitae2
+namespace CurriculumVitae2.UI.Mvc
 {
     public class Startup
     {
@@ -30,6 +27,8 @@ namespace CurriculumVitae2
             database.Initialize();
 
             services.AddSingleton<IDatabase>(database);
+            services.AddScoped<IErvaringService, ErvaringService>();
+            services.AddScoped<IOpleidingService, OpleidingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

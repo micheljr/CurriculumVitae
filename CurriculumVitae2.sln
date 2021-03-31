@@ -1,12 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculumVitae2.UI.Mvc", "CurriculumVitae2.UI.Mvc\CurriculumVitae2.UI.Mvc.csproj", "{D17865CF-D2F4-4C4D-9086-437D3FE75AE0}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculumVitae2.UI.Mvc", "CurriculumVitae2.UI.Mvc\CurriculumVitae2.UI.Mvc.csproj", "{D17865CF-D2F4-4C4D-9086-437D3FE75AE0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{01CDFF94-B496-451B-87A3-393868824279} = {01CDFF94-B496-451B-87A3-393868824279}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculumVitae2.Models", "CurriculumVitae2.Models\CurriculumVitae2.Models.csproj", "{47785CF2-693C-4A52-ABEA-DD23F08A37FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculumVitae2.Services", "CurriculumVitae2.Services\CurriculumVitae2.Services.csproj", "{7136A465-4047-4B0D-A60F-7CE4DEB0B1DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculumVitae2.Services", "CurriculumVitae2.Services\CurriculumVitae2.Services.csproj", "{7136A465-4047-4B0D-A60F-7CE4DEB0B1DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculumVitae2.Core", "CurriculumVitae2.Core\CurriculumVitae2.Core.csproj", "{E5E5925D-61F6-4E8F-AB4B-25CE704A8EFD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{01CDFF94-B496-451B-87A3-393868824279} = {01CDFF94-B496-451B-87A3-393868824279}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculumVitae2.Core", "CurriculumVitae2.Core\CurriculumVitae2.Core.csproj", "{E5E5925D-61F6-4E8F-AB4B-25CE704A8EFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculumVitae2.Domain", "CurriculumVitae2.Domain\CurriculumVitae2.Domain.csproj", "{01CDFF94-B496-451B-87A3-393868824279}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +27,6 @@ Global
 		{D17865CF-D2F4-4C4D-9086-437D3FE75AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D17865CF-D2F4-4C4D-9086-437D3FE75AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D17865CF-D2F4-4C4D-9086-437D3FE75AE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47785CF2-693C-4A52-ABEA-DD23F08A37FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47785CF2-693C-4A52-ABEA-DD23F08A37FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47785CF2-693C-4A52-ABEA-DD23F08A37FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47785CF2-693C-4A52-ABEA-DD23F08A37FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7136A465-4047-4B0D-A60F-7CE4DEB0B1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7136A465-4047-4B0D-A60F-7CE4DEB0B1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7136A465-4047-4B0D-A60F-7CE4DEB0B1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +35,15 @@ Global
 		{E5E5925D-61F6-4E8F-AB4B-25CE704A8EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5E5925D-61F6-4E8F-AB4B-25CE704A8EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5E5925D-61F6-4E8F-AB4B-25CE704A8EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01CDFF94-B496-451B-87A3-393868824279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CDFF94-B496-451B-87A3-393868824279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CDFF94-B496-451B-87A3-393868824279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CDFF94-B496-451B-87A3-393868824279}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF3077AF-AA48-45DF-B30A-DEDC1C759BD9}
 	EndGlobalSection
 EndGlobal

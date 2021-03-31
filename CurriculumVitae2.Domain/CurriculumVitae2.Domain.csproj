@@ -2,7 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Models</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Repositories" />
+    </ItemGroup>
 
 </Project>

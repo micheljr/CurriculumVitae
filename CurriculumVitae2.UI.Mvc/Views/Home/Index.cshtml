@@ -1,4 +1,4 @@
-﻿@model CurriculumVitae.Models.HomeViewModel
+﻿@model CurriculumVitae2.UI.Mvc.Models.HomeViewModel
 
 @{
     ViewData["Title"] = "Home";
@@ -9,16 +9,31 @@
 
 <div class="voorstelling">
     <div class="titleImg">
-        <h1 class="display-4">Hallo!</h1>
-        <img alt="Headshot" width="150px" height="182px" src="images/Headshot.jpg"/>
+        <h1 class="display-4">Welkom!</h1>
+        <img alt="Headshot"  src="images/Headshot.jpg"/>
     </div>
-    <p>Ik ben Michel Stroobants, @leeftijd jaar wonende te Oud-Turnhout.</p>
+    <p>Ik ben Michel Stroobants, @leeftijd jaar wonende te Oud-Turnhout. Ik solliciteer bij Trivec voor de functie van C#-developer.</p>
+    <p></p>
     
 </div>
-<div class="opleidingen">
-    @foreach (var item in Model.Opleidingen)
-    {
-        <partial name="OpleidingPartial" model="item"/>
-    }
+<br>
+<div class="opleidingenContainer">
+    <h1>Opleiding</h1>
+    <div class="opleidingen">
+        @foreach (var item in Model.Opleidingen)
+        {
+            <partial name="OpleidingPartial" model="item"/>
+        }
+    </div>
+</div>
+<br>
+<div class="ervaringContainer">
+    <h1>Werkervaring</h1>
+    <div class="ervaring">
+        @foreach (var item in Model.Ervaringen)
+        {
+            <partial name="ErvaringPartial" model="item"/>
+        }
+    </div>
 </div>
 <div class="ervaringen"></div>

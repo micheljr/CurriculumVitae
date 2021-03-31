@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Models;
+using CurriculumVitae2.Domain.Models;
 
-namespace CurriculumVitae.Core
+namespace CurriculumVitae2.Core
 {
     public interface IDatabase
     {

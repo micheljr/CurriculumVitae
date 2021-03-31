@@ -1,33 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using CurriculumVitae.Core;
-using CurriculumVitae.Models;
+﻿using System.Diagnostics;
+using CurriculumVitae2.Domain.Services;
+using CurriculumVitae2.UI.Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CurriculumVitae2.Models;
 
-namespace CurriculumVitae2.Controllers
+namespace CurriculumVitae2.UI.Mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IErvaringService _ervaringService;
+        private readonly IOpleidingService _opleidingService;
         private readonly ILogger<HomeController> _logger;
-        private readonly IDatabase _database;
 
-        public HomeController(ILogger<HomeController> logger, IDatabase database)
+        public HomeController(ILogger<HomeController> logger, IErvaringService ervaringService, IOpleidingService opleidingService)
         {
             _logger = logger;
-            _database = database;
+            _ervaringService = ervaringService;
+            _opleidingService = opleidingService;
         }
 
         public IActionResult Index()
         {
             var model = new HomeViewModel
             {
-                Opleidingen = _database.Opleidingen,
-                Ervaringen = _database.Ervaringen
+                Opleidingen = _opleidingService.ListOpleidingen(),
+                Ervaringen = _ervaringService.ListErvaringen()
             };
             return View(model);
         }

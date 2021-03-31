@@ -1,6 +1,8 @@
-﻿@model Models.Opleiding
+﻿@model CurriculumVitae2.Domain.Models.Opleiding
 
-<div class="card">
-    <h4>@Model.Naam</h4>
-    <p>Te @Model.Instituut</p>
+<div class="card text-center">
+    <img class="card-img-top" src="images/@Model.Image" alt="Logo @Model.Instituut">
+    <h4 class="card-title">@Model.Naam</h4>
+    <p class="card-subtitle">Aan @Model.Instituut</p>
+    <p class="card-text">van @Model.StartDatum.ToShortDateString() tot @Model.EindDatum.ToString()</p>
 </div>

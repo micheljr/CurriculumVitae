@@ -2,11 +2,15 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Core</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CurriculumVitae2.Domain\CurriculumVitae2.Domain.csproj" />
       <ProjectReference Include="..\CurriculumVitae2.Models\CurriculumVitae2.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Repositories" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,4 @@
-using System;
-
-namespace CurriculumVitae2.Models
+namespace CurriculumVitae2.UI.Mvc.Models
 {
     public class ErrorViewModel
     {
