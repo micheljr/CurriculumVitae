@@ -1,22 +1,23 @@
 ﻿using System.Collections.Generic;
 using CurriculumVitae2.Core;
 using CurriculumVitae2.Domain.Models;
+using CurriculumVitae2.Domain.Repositories;
 using CurriculumVitae2.Domain.Services;
 
 namespace CurriculumVitae2.Services
 {
     public class ErvaringService : IErvaringService
     {
-        private readonly IDatabase _database;
+        private readonly IErvaringRepository _ervaringRepository;
 
-        public ErvaringService(IDatabase database)
+        public ErvaringService(IErvaringRepository ervaringRepository)
         {
-            _database = database;
+            _ervaringRepository = ervaringRepository;
         }
 
         public IList<Ervaring> ListErvaringen()
         {
-            return _database.Ervaringen;
+            return _ervaringRepository.ListErvaringen();
         }
     }
 }

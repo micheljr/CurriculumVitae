@@ -59,7 +59,7 @@ namespace CurriculumVitae2.Core
                     BedrijfName = "Soudal",
                     Beschrijving = "De operator zorgt ervoor dat het machine kan blijven produceren, dit gaat van storingen oplossen tot ervoor zorgen dat alles aanwezig is dat nodig is om orders af te werken.",
                     StartDatum = DateTime.Parse("01/05/2017"),
-                    EindDatum = null,
+                    EindDatum = default,
                     Image = "Soudal.png"
                 }
             };

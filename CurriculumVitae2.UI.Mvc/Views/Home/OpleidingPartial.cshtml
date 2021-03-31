@@ -4,5 +4,5 @@
     <img class="card-img-top" src="images/@Model.Image" alt="Logo @Model.Instituut">
     <h4 class="card-title">@Model.Naam</h4>
     <p class="card-subtitle">Aan @Model.Instituut</p>
-    <p class="card-text">van @Model.StartDatum.ToShortDateString() tot @Model.EindDatum.ToString()</p>
+    <p class="card-text">van @Model.StartDatum.ToString("MM/yyyy") tot @(Model.EindDatum == default ? "op heden." : Model.EindDatum.ToString("MM/yyyy")).</p>
 </div>

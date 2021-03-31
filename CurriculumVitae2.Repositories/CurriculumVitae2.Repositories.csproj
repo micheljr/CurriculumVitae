@@ -5,11 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CurriculumVitae2.Domain\CurriculumVitae2.Domain.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Repositories" />
+      <ProjectReference Include="..\CurriculumVitae2.Core\CurriculumVitae2.Core.csproj" />
     </ItemGroup>
 
 </Project>

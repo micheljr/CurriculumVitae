@@ -1,5 +1,7 @@
 using CurriculumVitae2.Core;
+using CurriculumVitae2.Domain.Repositories;
 using CurriculumVitae2.Domain.Services;
+using CurriculumVitae2.Repositories;
 using CurriculumVitae2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,8 +29,12 @@ namespace CurriculumVitae2.UI.Mvc
             database.Initialize();
 
             services.AddSingleton<IDatabase>(database);
+            
             services.AddScoped<IErvaringService, ErvaringService>();
+            services.AddScoped<IErvaringRepository, ErvaringRepository>();
+            
             services.AddScoped<IOpleidingService, OpleidingService>();
+            services.AddScoped<IOpleidingRepository, OpleidingRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,2 +1,8 @@
 ﻿@model CurriculumVitae2.Domain.Models.Ervaring
 
+<div class="card text-center">
+    <img class="card-img-top" src="images/@Model.Image" alt="Logo @Model.BedrijfName">
+    <h4 class="card-title">@Model.Name</h4>
+    <p class="card-subtitle">Bij @Model.BedrijfName</p>
+    <p class="card-text">van @Model.StartDatum.ToString("MM/yyyy") tot @(Model.EindDatum == default ? "op heden" : Model.EindDatum.ToString("MM/yyyy")).</p>
+</div>
