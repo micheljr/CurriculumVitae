@@ -40,7 +40,7 @@ namespace CurriculumVitae2.Core
                 Image = "Vives.png",
                 Beschrijving = "",
                 StartDatum = DateTime.Parse("01/09/2018", System.Globalization.CultureInfo.GetCultureInfo("nl-NL")),
-                EindDatum = DateTime.Parse("30/06/2022", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))
+                EindDatum = default
                 }
             };
             Ervaringen = new List<Ervaring>
@@ -77,14 +77,14 @@ namespace CurriculumVitae2.Core
                 {
                     Name = "Supermarket.API",
                     Url = "https://dev.azure.com/r0762289/_git/Supermarket.API",
-                    Beschrijving = "Project om het maken van een CRUD REST API in C#.NET te testen",
+                    Beschrijving = "Project om het opzetten van een CRUD REST API in C#.NET te testen",
                     Image = "Supermarket.png"
                 },
                 new Project
                 {
                     Name = "Vivesblog",
                     Url = "https://dev.azure.com/r0762289/_git/VivesBlogOpgesplitst",
-                    Beschrijving = "Project in C# .NET Core Web dat een website verbind met een database.",
+                    Beschrijving = "Project in C# .NET Core Web dat een website connecteert met een database.",
                     Image = "Vivesblog.png"
                 }
                 ,
@@ -99,7 +99,7 @@ namespace CurriculumVitae2.Core
                 {
                     Name = "Giflib",
                     Url = "https://github.com/micheljr/giflib",
-                    Beschrijving = "Project in Java om met Spring te leren werken",
+                    Beschrijving = "Project in Java om met Spring-framework te leren werken",
                     Image = "giflib.png"
                 }
             };
