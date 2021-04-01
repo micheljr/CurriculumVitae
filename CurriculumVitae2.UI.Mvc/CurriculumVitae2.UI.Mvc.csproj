@@ -1,11 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>5e4b6a81-b7ff-4f8b-85f7-c6c9e388c799</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CurriculumVitae2.Services\CurriculumVitae2.Services.csproj" />
+	    <ProjectReference Include="..\CurriculumVitae2.Services\CurriculumVitae2.Services.csproj" />
     </ItemGroup>
 
 </Project>

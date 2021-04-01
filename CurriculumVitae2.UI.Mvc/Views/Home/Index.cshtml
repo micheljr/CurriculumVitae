@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Home";
-    var dob = DateTime.Parse("18/01/1995");
+    var dob = DateTime.Parse("18/01/1995", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"));
     var leeftijd = DateTime.Now.Year - dob.Year;
     if ((dob.Month > DateTime.Now.Month) || (dob.Month == DateTime.Now.Month && dob.Day > DateTime.Now.Day)) {leeftijd--;}
 }
