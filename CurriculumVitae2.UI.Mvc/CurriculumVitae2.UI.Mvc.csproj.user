@@ -2,5 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <NameOfLastUsedPublishProfile>E:\RiderProjects\CurriculumVitae2\CurriculumVitae2.UI.Mvc\Properties\PublishProfiles\CurriculumVitaeMS - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>CurriculumVitae2</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

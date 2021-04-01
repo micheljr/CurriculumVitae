@@ -125,6 +125,12 @@ body {
   border: solid 2px white;
   margin-top: 10px;
 }
+.eigenschappenContainer .card {
+    border: solid 2px white;
+}
+    .eigenschappenContainer .card:hover {
+        border: solid 2px cornflowerblue;
+    }
 .subContainer div:hover, .subContainer a:hover {
   border: solid 2px cornflowerblue;
 }
@@ -139,12 +145,43 @@ body {
 .ervaringen, .projecten {
   width: 100%;
 }
+.card p {
+  color: #354763;
+}
+
+ul {
+  list-style: none;
+  color: #354763;
+}
+ul li:before {
+  content: '✓';
+}
+
+.eigenschappenContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.eigenschappenContainer .card {
+  width: 30%;
+  height: auto;
+}
+
+/* Media queries */
 
 @media only screen and (max-width: 768px){
   .subContainer div, .subContainer a{
     width: 40%;
     height: auto;
   }
+    .eigenschappenContainer .card {
+        width: 49%;
+        height: auto;
+        margin-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -164,6 +201,13 @@ body {
   .titleImg img {
     margin-right: 50px;
   }
+  .eigenschappenContainer {
+    flex-direction: column;
+  }
+    .eigenschappenContainer .card {
+        width: 70%;
+        height: auto;
+    }
 }
 @media only screen and (max-width: 426px){
   .titleImg {

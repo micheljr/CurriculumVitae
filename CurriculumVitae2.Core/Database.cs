@@ -82,6 +82,14 @@ namespace CurriculumVitae2.Core
                 },
                 new Project
                 {
+                    Name = "Vivesblog",
+                    Url = "https://dev.azure.com/r0762289/_git/VivesBlogOpgesplitst",
+                    Beschrijving = "Project in C# .NET Core Web dat een website verbind met een database.",
+                    Image = "Vivesblog.png"
+                }
+                ,
+                new Project
+                {
                     Name = "Pet-Clinic",
                     Url = "https://github.com/micheljr/sfg-pet-clinic",
                     Beschrijving = "Project in Java om het Spring-framework te leren gebruiken.",
